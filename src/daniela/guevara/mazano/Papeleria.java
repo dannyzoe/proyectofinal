@@ -13,20 +13,20 @@ import java.util.ArrayList;
  *
  * @author T107
  */
-public class Usuario implements Serializable{
+public class Papeleria implements Serializable{
     private int id;
     private String nombre;
-    private float sueldos;
-    private ArrayList<Usuario> usuarios;
+    private float precio;
+    private ArrayList<Papeleria> papelerias;
 
-    public Usuario() {
+    public Papeleria() {
     }
 
-    public Usuario(int id, String nombre, float sueldos, ArrayList<Usuario> usuarios) {
+    public Papeleria(int id, String nombre, float sueldos, ArrayList<Papeleria> papelerias) {
         this.id = id;
         this.nombre = nombre;
-        this.sueldos = sueldos;
-        this.usuarios = usuarios;
+        this.precio = precio;
+        this.papelerias = papelerias;
     }
 
     
@@ -46,25 +46,25 @@ public class Usuario implements Serializable{
         this.nombre = nombre;
     }
 
-    public float getSueldos() {
-        return sueldos;
+    public float getPrecio() {
+        return precio;
     }
 
-    public void setSueldos(float sueldos) {
-        this.sueldos = sueldos;
+    public void setPrecio(float precio) {
+        this.precio = precio;
     }
 
-    public ArrayList<Usuario> getUsuarios() {
-        return usuarios;
+    public ArrayList<Papeleria> getPapelerias() {
+        return papelerias;
     }
 
-    public void setUsuarios(ArrayList<Usuario> usuarios) {
-        this.usuarios = usuarios;
+    public void setPapelerias(ArrayList<Papeleria> usuarios) {
+        this.papelerias = papelerias;
     }
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", sueldos=" + sueldos + ", usuarios=" + usuarios + '}';
+        return "Papeleria{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", papeleria=" + papelerias + '}';
     }
     
 }

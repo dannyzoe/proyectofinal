@@ -10,7 +10,7 @@ import java.io.File;
 
 /**
  *
- * @author T107
+ * @author  DANIELAGM
  */
 public class ProyectoFinal {
 

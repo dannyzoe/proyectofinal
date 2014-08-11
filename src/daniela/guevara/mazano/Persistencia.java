@@ -15,33 +15,33 @@ import java.util.ArrayList;
 
 /**
  *
- * @author T107
+ * @author DANIELAGM
  */
 public class Persistencia {
-    public static ArrayList <Usuario> buscarTodos(){
-        ArrayList<Usuario> usuarios=new ArrayList<Usuario>();
+    public static ArrayList <Papeleria> buscarTodos(){
+        ArrayList<Papeleria> papelerias=new ArrayList<Papeleria>();
         try{
             File f=new File(System.getProperty("user.home")+"archivaldo.ser");
             FileInputStream fis=new FileInputStream(f);
               ObjectInputStream ois=new ObjectInputStream(fis);
-            usuarios= (ArrayList<Usuario>) ois.readObject();
+            papelerias= (ArrayList<Papeleria>) ois.readObject();
         }catch (Exception e){
             
         }
-        return usuarios;
+        return papelerias;
     }
-    public static void guardar (Usuario u){
-        ArrayList<Usuario> usuarios= new ArrayList<Usuario>();
+    public static void guardar (Papeleria u){
+        ArrayList<Papeleria> papelerias= new ArrayList<Papeleria>();
       try{
           //File f=new File (System.getProperty("user.home")+"/archivaldo.ser");
           File f=new File (System.getProperty("user.home")+"archivaldo.ser");
           if(f.exists()){
-              usuarios= buscarTodos();
+              papelerias= buscarTodos();
           }
           FileOutputStream fos=new FileOutputStream (f);
           ObjectOutputStream oos= new ObjectOutputStream (fos);
-          usuarios.add(u);
-          oos.writeObject(usuarios);
+          papelerias.add(u);
+          oos.writeObject(papelerias);
       }catch(Exception e){}
       
     }
